@@ -17,7 +17,7 @@ const League = () => {
     useEffect(() => {
         if(league){
             const fetchData = async() => {
-                const response = await getLeagueSeason(league)
+                const response = await getLeagueSeason(league.league)
                 setSeason(response)
             }
             fetchData()

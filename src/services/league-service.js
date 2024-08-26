@@ -1,7 +1,6 @@
 import axios from 'axios'
 import data from '../json/leagues.json'
 
-const api_key = import.meta.env.VITE_FOOTBALL_API_KEY
 const leagues = data.leagues;
 
 const getLeagues = () => {
@@ -9,7 +8,7 @@ const getLeagues = () => {
 }
 
 const getLeague = (id) => {
-  return leagues.find(league => +league.league.id === +id)
+  return leagues.find(data => +data.league.id === +id)
 }
 
 const getLeagueSeason = async (league) => {
@@ -17,11 +16,11 @@ const getLeagueSeason = async (league) => {
     method: 'get',
     url: 'https://v3.football.api-sports.io/standings',
     params: {
-        league: league.league.id,
-        season: 2024
+        league: league.id,
+        season: import.meta.env.VITE_YEAR
     },
     headers: {
-      'x-rapidapi-key': api_key,
+      'x-rapidapi-key': import.meta.env.VITE_API_KEY,
       'x-rapidapi-host': 'v3.football.api-sports.io'
     }
   }
