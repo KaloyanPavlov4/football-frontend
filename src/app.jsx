@@ -5,7 +5,7 @@ import League from './components/league'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-
+  
   return (
     <Routes> 
       <Route path="/" element={<Home />}/>

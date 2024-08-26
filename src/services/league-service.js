@@ -1,7 +1,6 @@
 import axios from 'axios'
 import data from '../json/leagues.json'
 
-const api_key = import.meta.env.VITE_FOOTBALL_API_KEY
 const leagues = data.leagues;
 
 const getLeagues = () => {
@@ -18,10 +17,10 @@ const getLeagueSeason = async (league) => {
     url: 'https://v3.football.api-sports.io/standings',
     params: {
         league: league.id,
-        season: 2024
+        season: import.meta.env.VITE_YEAR
     },
     headers: {
-      'x-rapidapi-key': api_key,
+      'x-rapidapi-key': import.meta.env.VITE_API_KEY,
       'x-rapidapi-host': 'v3.football.api-sports.io'
     }
   }
