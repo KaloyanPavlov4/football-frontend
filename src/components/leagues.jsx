@@ -21,9 +21,9 @@ const Leagues = () => {
         setCountryFilter(event.target.value)
     }
 
-    const leaguesToShow = filter || countryFilter ? leagues.filter(league => league.league.type === 'League' 
-    && league.league.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()) 
-    && league.country.name.toLocaleLowerCase().includes(countryFilter.toLocaleLowerCase())) : null
+    const leaguesToShow = filter || countryFilter ? leagues.filter(data => data.league.type === 'League' 
+    && data.league.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()) 
+    && data.country.name.toLocaleLowerCase().includes(countryFilter.toLocaleLowerCase())) : null
     
     
     return (

@@ -8,7 +8,7 @@ const LeagueList = ({leagues}) => {
     )
     return (
         <ul>
-            {leagues.map(item => <li key={item.league.id}>{item.league.name} - {item.country.name} <Link to={`/leagues/${item.league.id}`}>Show</Link></li>)}
+            {leagues.map(data => <li key={data.league.id}>{data.league.name} - {data.country.name} <Link to={`/leagues/${data.league.id}`}>Show</Link></li>)}
         </ul>
     )
 }
