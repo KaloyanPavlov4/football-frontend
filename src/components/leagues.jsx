@@ -25,7 +25,6 @@ const Leagues = () => {
     && data.league.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()) 
     && data.country.name.toLocaleLowerCase().includes(countryFilter.toLocaleLowerCase())) : null
     
-    
     return (
         <div>
             <Nav/>
