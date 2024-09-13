@@ -35,7 +35,7 @@ const League = () => {
                 <br/>
                 <h2>Country: {league.country.name}</h2>
                 <h1>Standings:</h1>
-                <Standings standings={season[0].league.standings[0]}/>
+                <Standings standings={season}/>
             </Container>
         </div>
     )

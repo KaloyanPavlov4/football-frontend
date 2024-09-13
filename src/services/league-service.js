@@ -25,8 +25,7 @@ const getLeagueSeason = async (league) => {
     }
   }
 
-  const response = await axios(config).then(response => response.data.response)
-  console.log(response)
+  const response = await axios(config).then(response => response.data.response[0].league.standings[0])
   return response
 }
 
